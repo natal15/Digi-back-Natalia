@@ -267,7 +267,7 @@ INSERT INTO digimons_rookie (
 INSERT INTO digimons_rookie (
   name, level, digimons_champion_id 
 ) VALUES (
-  'Wormon', 'Rookie', (
+  'Wormmon', 'Rookie', (
     SELECT id FROM digimons_champion WHERE name LIKE 'Stingmon'
   )
 );
