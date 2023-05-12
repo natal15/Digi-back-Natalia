@@ -20,10 +20,9 @@ const showAll = (db) => async () => {
 // segundo end point, muestra el digimon por params
 const showOne = (db) => async (name) => {
     
-    const name = req.query.name
     try {
 
-        const response = await db.query(all(name))  
+        const response = await db.query(one(name))  
         return {
             ok: true,
             response: response.rows

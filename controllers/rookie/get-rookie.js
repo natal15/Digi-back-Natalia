@@ -1,10 +1,8 @@
-const queries = require('../../models/champion')
+const queries = require('../../models/rookie')
 
 module.exports = (db) => async (req, res, next) => {
    
-    const name = req.query.id
-
-    const dbRes = await queries.showOne(await db)(name)
+    const dbRes = await queries.getRookie(await db)()
 
     if(!dbRes.ok) return next({
         statusCode: 500,

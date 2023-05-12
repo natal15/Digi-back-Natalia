@@ -1,10 +1,10 @@
-const queries = require('../../models/champion')
+const queries = require('../../models/children')
 
 module.exports = (db) => async (req, res, next) => {
    
-    const name = req.query.id
+    const emblem = req.params.id
 
-    const dbRes = await queries.showOne(await db)(name)
+    const dbRes = await queries.getEmblems(await db)(emblem)
 
     if(!dbRes.ok) return next({
         statusCode: 500,
