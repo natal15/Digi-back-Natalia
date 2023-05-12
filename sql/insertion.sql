@@ -483,4 +483,53 @@ INSERT INTO children_emblems (
   (SELECT id FROM emblems WHERE name = 'light')
 );
 
+INSERT INTO children_emblems (
+  chosen_children_id, emblems_id
+) VALUES (
+  (SELECT id FROM chosen_children WHERE name LIKE 'Davis'),
+  (SELECT id FROM emblems WHERE name = 'brave')
+);
+
+INSERT INTO children_emblems (
+  chosen_children_id, emblems_id
+) VALUES (
+  (SELECT id FROM chosen_children WHERE name LIKE 'Davis'),
+  (SELECT id FROM emblems WHERE name = 'friendship')
+);
+
+INSERT INTO children_emblems (
+  chosen_children_id, emblems_id
+) VALUES (
+  (SELECT id FROM chosen_children WHERE name LIKE 'Yoli'),
+  (SELECT id FROM emblems WHERE name = 'love')
+);
+
+INSERT INTO children_emblems (
+  chosen_children_id, emblems_id
+) VALUES (
+  (SELECT id FROM chosen_children WHERE name LIKE 'Yoli'),
+  (SELECT id FROM emblems WHERE name = 'purity')
+);
+
+INSERT INTO children_emblems (
+  chosen_children_id, emblems_id
+) VALUES (
+  (SELECT id FROM chosen_children WHERE name LIKE 'Cody'),
+  (SELECT id FROM emblems WHERE name = 'knowledge')
+);
+
+INSERT INTO children_emblems (
+  chosen_children_id, emblems_id
+) VALUES (
+  (SELECT id FROM chosen_children WHERE name LIKE 'Cody'),
+  (SELECT id FROM emblems WHERE name = 'honesty')
+);
+
+INSERT INTO children_emblems (
+  chosen_children_id, emblems_id
+) VALUES (
+  (SELECT id FROM chosen_children WHERE name LIKE 'Ken Ichijouji'),
+  (SELECT id FROM emblems WHERE name = 'kindness')
+);
+
 
