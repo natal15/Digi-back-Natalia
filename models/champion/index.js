@@ -1,6 +1,6 @@
-const { all } = require('./queries')
+const { all, one } = require('./queries')
 
-// 1.- Primer ejercicio y quinto ejercicio
+// Primer end point, muestra los champion y su evolución previa
 const showAll = (db) => async () => {
     try {
 
@@ -17,7 +17,27 @@ const showAll = (db) => async () => {
     }
 }
 
+// segundo end point, muestra el digimon por params
+const showOne = (db) => async (name) => {
+    
+    const name = req.query.name
+    try {
+
+        const response = await db.query(all(name))  
+        return {
+            ok: true,
+            response: response.rows
+        }
+    } catch(error) {
+        return {
+            ok: false,
+            message: error.message,
+        }
+    }
+}
+
 module.exports = {
     showAll,
+    showOne,
     
 }
