@@ -1,10 +1,10 @@
-const { getMega } = require('./queries')
+const { showMega, allMega } = require('./queries')
 
 // 
-const showMega = (db) => async () => {
+const postMega = (db) => async (mega) => {
     try {
 
-        const response = await db.query(getMega())  
+        const response = await db.query(showMega(mega.name, mega.level))  
         return {
             ok: true,
             response: response.rows
@@ -17,6 +17,25 @@ const showMega = (db) => async () => {
     }
 }
 
+const findMega = (db) => async () => {
+    try {
+
+        const response = await db.query(allMega())  
+        return {
+            ok: true,
+            response: response.rows
+        }
+    } catch(error) {
+        return {
+            ok: false,
+            message: error.message,
+        }
+    }
+}
+
+
+
 module.exports = {
-    showMega,
+    postMega,
+    findMega,
 }

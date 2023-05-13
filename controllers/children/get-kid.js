@@ -1,8 +1,10 @@
-const queries = require('../../models/rookie')
+const queries = require('../../models/children')
 
 module.exports = (db) => async (req, res, next) => {
    
-    const dbRes = await queries.showRookie(await db)()
+    const byKid = req.params.id
+
+    const dbRes = await queries.getKid(await db)(byKid)
 
     if(!dbRes.ok) return next({
         statusCode: 500,

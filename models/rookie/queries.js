@@ -1,16 +1,16 @@
 const { sql } = require('slonik')
 
 // 
-const showRookie = () => sql.unsafe`
+const getEvo = () => sql.unsafe`
 
 
-        SELECT chosen_children.name, chosen_children.description, emblems.name AS emblem
-        FROM chosen_children
-        JOIN children_emblems ON chosen_children.id = children_emblems.chosen_children_id
-        JOIN emblems ON emblems.id = children_emblems.emblems_id
-        WHERE emblems.name = 'brave'
+        SELECT digimons_rookie.name AS rookie, digimons_champion.name AS champion,
+        digimons_mega_champion.name AS mega
+        FROM digimons_rookie
+        JOIN digimons_champion ON digimons_rookie.digimons_champion_id = digimons_champion.id
+        JOIN digimons_mega_champion ON digimons_champion.digimons_mega_champion_id = digimons_mega_champion.id
         `
 
 module.exports = {
-    showRookie,
+    getEvo,
 }  

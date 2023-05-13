@@ -2,7 +2,7 @@ const queries = require('../../models/mega')
 
 module.exports = (db) => async (req, res, next) => {
    
-    const dbRes = await queries.getMega(await db)()
+    const dbRes = await queries.findMega(await db)()
 
     if(!dbRes.ok) return next({
         statusCode: 500,
@@ -11,7 +11,8 @@ module.exports = (db) => async (req, res, next) => {
 
     res.status(200).json({
         success: true,
-        data: dbRes.response,
+        response: dbRes.response,
+        
     })
     
 }

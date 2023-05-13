@@ -1,16 +1,22 @@
 const { sql } = require('slonik')
 
 // 
-const showMega = () => sql.unsafe`
+const showMega = (name, level) => sql.unsafe`
 
 
-        SELECT chosen_children.name, chosen_children.description, emblems.name AS emblem
-        FROM chosen_children
-        JOIN children_emblems ON chosen_children.id = children_emblems.chosen_children_id
-        JOIN emblems ON emblems.id = children_emblems.emblems_id
-        WHERE emblems.name = 'brave'
+        INSERT INTO digimons_mega_champion
+        (name, level)
+        VALUES (${name}, ${level})
+        `
+
+const allMega = () => sql.unsafe`
+
+
+        SELECT name, level
+        FROM digimons_mega_champion
         `
 
 module.exports = {
     showMega,
+    allMega,
 }        

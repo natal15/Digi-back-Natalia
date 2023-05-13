@@ -9,12 +9,6 @@ INSERT INTO digimons_mega_champion (
 INSERT INTO digimons_mega_champion (
   name, level
 ) VALUES (
-  'Skull-Greymon', 'Mega_Champion'
-);
-
-INSERT INTO digimons_mega_champion (
-  name, level
-) VALUES (
   'Garudamon', 'Mega_Champion'
 );
 
@@ -131,7 +125,7 @@ INSERT INTO digimons_champion (
   name, level, digimons_mega_champion_id 
 ) VALUES (
   'Kabuterimon', 'Champion', (
-    SELECT id FROM digimons_mega_champion WHERE name LIKE 'Mega-Kabuterimon'
+    SELECT id FROM digimons_mega_champion WHERE name LIKE 'Megakabuterimon'
   )
 );
 

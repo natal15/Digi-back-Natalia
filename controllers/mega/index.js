@@ -1,3 +1,4 @@
 module.exports = {
-    getMega: require('./get-mega'),
+    postMega: require('./post-mega'),
+    getMega: require('./search-all'),
 }

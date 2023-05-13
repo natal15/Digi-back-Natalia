@@ -1,8 +1,8 @@
-const queries = require('../../models/rookie')
+const queries = require('../../models/mega')
 
 module.exports = (db) => async (req, res, next) => {
    
-    const dbRes = await queries.showRookie(await db)()
+    const dbRes = await queries.postMega(await db)(req.body)
 
     if(!dbRes.ok) return next({
         statusCode: 500,
@@ -11,7 +11,7 @@ module.exports = (db) => async (req, res, next) => {
 
     res.status(200).json({
         success: true,
-        response: dbRes.response,
+        
     })
     
 }
