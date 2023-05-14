@@ -1,8 +1,13 @@
 const { insertUser, selectByEmail } = require('./queries')
+const nodemailer = require('../../controllers/nodemailer')
 
-const createUser = (db) => async (email, password) => {
+
+const createUser = (db) => async (nickname, email, password) => {
     try {
-        await db.query(insertUser(email, password))
+        await db.query(insertUser(nickname, email, password))
+
+        await nodemailer({ email })
+
         return {
             ok: true
         }

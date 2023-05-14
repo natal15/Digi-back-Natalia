@@ -1,5 +1,7 @@
 require('dotenv').config()
 const { v4: uuidv4 } = require("uuid")
+const nodemailer = './controllers/nodemailer'
+
 
 const port = process.env.PORT
 const dbUrl = process.env.DB_URL

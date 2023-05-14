@@ -1,10 +1,10 @@
 const { sql } = require('slonik')
 
-const insertUser = (email, password) => sql.unsafe`
+const insertUser = (nickname, email, password) => sql.unsafe`
     INSERT INTO users (
-        email, password
+        nickname, email, password
     ) VALUES (
-        ${email}, ${password}
+        ${nickname}, ${email}, ${password}
     );
 `
 

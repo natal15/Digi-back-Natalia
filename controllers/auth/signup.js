@@ -1,12 +1,13 @@
 const { hash } = require('simple-stateless-auth-library')
 const { createUser } = require('../../models/auth')
 
+
 module.exports = (db) => async (req, res, next) => {
-    const { email, password } = req.body
+    const { nickname, email, password } = req.body
     
     const encrypted = await hash.encrypt(password)
 
-    const response = await createUser(await db)(email, encrypted)
+    const response = await createUser(await db)(nickname, email, encrypted)
 
     if(!response.ok) return next({
         statusCode: 500,
