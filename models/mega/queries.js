@@ -16,7 +16,16 @@ const allMega = () => sql.unsafe`
         FROM digimons_mega_champion
         `
 
+const eliminateMega = (elim) => sql.unsafe`
+
+
+        DELETE FROM digimons_mega_champion
+        WHERE name = ${elim}
+        `
+
+
 module.exports = {
     showMega,
     allMega,
+    eliminateMega,
 }        

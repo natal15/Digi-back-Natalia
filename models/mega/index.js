@@ -1,4 +1,4 @@
-const { showMega, allMega } = require('./queries')
+const { showMega, allMega, eliminateMega } = require('./queries')
 
 // 
 const postMega = (db) => async (mega) => {
@@ -33,9 +33,26 @@ const findMega = (db) => async () => {
     }
 }
 
+const eraseMega = (db) => async (elim) => {
+    try {
+
+        const response = await db.query(eliminateMega(elim))  
+        return {
+            ok: true,
+            response: response.rows
+        }
+    } catch(error) {
+        return {
+            ok: false,
+            message: error.message,
+        }
+    }
+}
+
 
 
 module.exports = {
     postMega,
     findMega,
+    eraseMega,
 }
