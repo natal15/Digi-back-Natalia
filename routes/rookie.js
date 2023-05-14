@@ -5,6 +5,5 @@ module.exports = (db) => {
     router.get('/', controllers.getRookie(db))
 
 
-
     return router
 }

@@ -26,14 +26,14 @@ CREATE TABLE IF NOT EXISTS emblems (
 
 CREATE TABLE IF NOT EXISTS digimons_mega_champion (
   id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
-  name TEXT NOT NULL UNIQUE,
-  level TEXT NOT NULL
+  mega TEXT NOT NULL UNIQUE,
+  level TEXT
 );
 
 CREATE TABLE IF NOT EXISTS digimons_champion (
   id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
-  name TEXT NOT NULL UNIQUE,
-  level TEXT NOT NULL,
+  champion TEXT NOT NULL UNIQUE,
+  level TEXT
   digimons_mega_champion_id uuid REFERENCES digimons_mega_champion
     ON UPDATE CASCADE
     ON DELETE SET NULL
@@ -41,8 +41,8 @@ CREATE TABLE IF NOT EXISTS digimons_champion (
 
 CREATE TABLE IF NOT EXISTS digimons_rookie (
   id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
-  name TEXT NOT NULL UNIQUE,
-  level TEXT NOT NULL,
+  rookie TEXT NOT NULL UNIQUE,
+  level TEXT,
   digimons_champion_id uuid REFERENCES digimons_champion
     ON UPDATE CASCADE
     ON DELETE CASCADE
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS digimons_rookie (
 
 CREATE TABLE IF NOT EXISTS chosen_children (
   id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
-  name TEXT NOT NULL UNIQUE,
+  child TEXT NOT NULL UNIQUE,
   description TEXT NOT NULL,
   digimons_rookie_id uuid REFERENCES digimons_rookie
     ON UPDATE CASCADE

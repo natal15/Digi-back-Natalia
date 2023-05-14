@@ -1,10 +1,10 @@
 const { showMega, allMega, eliminateMega } = require('./queries')
 
 // 
-const postMega = (db) => async (mega) => {
+const postMega = (db) => async (newM) => {
     try {
 
-        const response = await db.query(showMega(mega.name, mega.level))  
+        const response = await db.query(showMega(newM.mega, newM.level))  
         return {
             ok: true,
             response: response.rows

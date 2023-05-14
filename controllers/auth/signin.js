@@ -7,8 +7,8 @@ module.exports = (db) => async (req, res, next) => {
     const response = await selectUser(await db)(email, hash.compare(password))
 
     if(!response.ok) return next({
-        statusCode: 500,
-        error: new Error('something went wrong!'),
+        statusCode: 400,
+        error: new Error('username or password incorrects'),
     })
 
     serialize(res, response.content)

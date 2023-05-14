@@ -1,6 +1,6 @@
 const { all, one } = require('./queries')
 
-// Primer end point, muestra los champion y su evolución previa
+
 const showAll = (db) => async () => {
     try {
 
@@ -17,12 +17,12 @@ const showAll = (db) => async () => {
     }
 }
 
-// segundo end point, muestra el digimon por params
-const showOne = (db) => async (name) => {
+
+const showOne = (db) => async (selectCh) => {
     
     try {
 
-        const response = await db.query(one(name))  
+        const response = await db.query(one(selectCh))  
         return {
             ok: true,
             response: response.rows

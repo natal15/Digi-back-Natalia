@@ -1,26 +1,27 @@
 const { sql } = require('slonik')
 
-// 
-const showMega = (name, level) => sql.unsafe`
+//Inserta un nuevo digimon mega 
+const showMega = (mega, level) => sql.unsafe`
 
 
         INSERT INTO digimons_mega_champion
-        (name, level)
-        VALUES (${name}, ${level})
+        (mega, level)
+        VALUES (${mega}, ${level})
         `
-
+// Deja ver todos los digimons mega
 const allMega = () => sql.unsafe`
 
 
-        SELECT name, level
+        SELECT mega, level
         FROM digimons_mega_champion
         `
 
+//Elimina un digimon mega        
 const eliminateMega = (elim) => sql.unsafe`
 
 
         DELETE FROM digimons_mega_champion
-        WHERE name = ${elim}
+        WHERE mega = ${elim}
         `
 
 

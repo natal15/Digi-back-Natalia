@@ -1,6 +1,6 @@
 const { childEmb, chilDigi, kidEmblem } = require('./queries')
 
-// 
+
 const getEmblems = (db) => async (byEmblem) => {
     try {
         const response = await db.query(childEmb(byEmblem))  
@@ -16,7 +16,7 @@ const getEmblems = (db) => async (byEmblem) => {
     }
 }
 
-// 
+
 const getDigi = (db) => async () => {
     
     try {

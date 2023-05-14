@@ -17,6 +17,10 @@ const showRookie = (db) => async () => {
     }
 }
 
+
+
+
 module.exports = {
     showRookie,
+    
 }
