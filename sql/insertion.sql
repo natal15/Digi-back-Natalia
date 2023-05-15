@@ -270,7 +270,7 @@ INSERT INTO digimons_rookie (
 INSERT INTO chosen_children (
   child, description, digimons_rookie_id
 ) VALUES (
-  'Tai', 'Er prota', (
+  'Tai', 'El líder valiente y decidido del grupo', (
     SELECT id FROM digimons_rookie WHERE rookie LIKE 'Agumon'
   )
 );
@@ -278,7 +278,7 @@ INSERT INTO chosen_children (
 INSERT INTO chosen_children (
   child, description, digimons_rookie_id
 ) VALUES (
-  'Sora', 'La del pajarraco', (
+  'Sora', 'Amiga leal y compasiva dentro del grupo', (
     SELECT id FROM digimons_rookie WHERE rookie LIKE 'Piyomon'
   )
 );
@@ -286,7 +286,7 @@ INSERT INTO chosen_children (
 INSERT INTO chosen_children (
   child, description, digimons_rookie_id
 ) VALUES (
-  'Matt', 'Er que no es el prota', (
+  'Matt', 'Siempre busca proteger a sus amigos y luchar por lo correcto', (
     SELECT id FROM digimons_rookie WHERE rookie LIKE 'Gabumon'
   )
 );
@@ -294,7 +294,7 @@ INSERT INTO chosen_children (
 INSERT INTO chosen_children (
   child, description, digimons_rookie_id
 ) VALUES (
-  'TK', 'Er zagalillo', (
+  'TK', 'Su corazón puro y su inocencia lo convierten en un faro de esperanza', (
     SELECT id FROM digimons_rookie WHERE rookie LIKE 'Patamon'
   )
 );
@@ -302,7 +302,7 @@ INSERT INTO chosen_children (
 INSERT INTO chosen_children (
   child, description, digimons_rookie_id
 ) VALUES (
-  'Joe', 'Er padre', (
+  'Joe', 'Es el miembro responsable y estudioso del grupo', (
     SELECT id FROM digimons_rookie WHERE rookie LIKE 'Gomamon'
   )
 );
@@ -310,7 +310,7 @@ INSERT INTO chosen_children (
 INSERT INTO chosen_children (
   child, description, digimons_rookie_id
 ) VALUES (
-  'Mimi', 'la guapa', (
+  'Mimi', 'Aporta una chispa de alegría a todas las situaciones', (
     SELECT id FROM digimons_rookie WHERE rookie LIKE 'Palmon'
   )
 );
@@ -318,7 +318,7 @@ INSERT INTO chosen_children (
 INSERT INTO chosen_children (
   child, description, digimons_rookie_id
 ) VALUES (
-  'Izzy', 'Er listo', (
+  'Izzy', 'Es el genio tecnológico y cerebro del grupo', (
     SELECT id FROM digimons_rookie WHERE rookie LIKE 'Tentomon'
   )
 );
@@ -326,7 +326,7 @@ INSERT INTO chosen_children (
 INSERT INTO chosen_children (
   child, description, digimons_rookie_id
 ) VALUES (
-  'Kairi', 'La nueva', (
+  'Kairi', 'Es un miembro entusiasta y determinado del equipo ', (
     SELECT id FROM digimons_rookie WHERE rookie LIKE 'Salamon'
   )
 );
@@ -334,7 +334,7 @@ INSERT INTO chosen_children (
 INSERT INTO chosen_children (
   child, description, digimons_rookie_id
 ) VALUES (
-  'Davis', 'Er nuevo Tai', (
+  'Davis', 'Es un miembro entusiasta y determinado del equipo ', (
     SELECT id FROM digimons_rookie WHERE rookie LIKE 'Veemon'
   )
 );
@@ -342,7 +342,7 @@ INSERT INTO chosen_children (
 INSERT INTO chosen_children (
   child, description, digimons_rookie_id
 ) VALUES (
-  'Yoli', 'La nueva Sora', (
+  'Yoli', 'Siempre busca aprender y descubrir cosas nuevas', (
     SELECT id FROM digimons_rookie WHERE rookie LIKE 'Hawkmon'
   )
 );
@@ -350,7 +350,7 @@ INSERT INTO chosen_children (
 INSERT INTO chosen_children (
   child, description, digimons_rookie_id
 ) VALUES (
-  'Cody', 'Elle', (
+  'Cody', 'Siempre reflexivo y cauteloso', (
     SELECT id FROM digimons_rookie WHERE rookie LIKE 'Armadimon'
   )
 );
@@ -358,7 +358,7 @@ INSERT INTO chosen_children (
 INSERT INTO chosen_children (
   child, description, digimons_rookie_id
 ) VALUES (
-  'Ken Ichijouji', 'Er emo', (
+  'Ken Ichijouji', 'Búsqueda de redención y crecimiento personal', (
     SELECT id FROM digimons_rookie WHERE rookie LIKE 'Wormmon'
   )
 );
